@@ -81,10 +81,7 @@ export const BillzProducts2 = () => {
       {/* Sarlavha */}
       <h1 className="mb-6 text-2xl font-semibold text-gray-900">
         Billz mahsulotlar soni:{" "}
-        <span className="px-2 py-1 text-white bg-blue-600 rounded-md">
-          {data?.count}
-        </span>{" "}
-        ta
+        <span className="px-2 py-1 text-black">{data?.count}</span> ta
       </h1>
 
       <Table
