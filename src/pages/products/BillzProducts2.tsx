@@ -95,16 +95,15 @@ export const BillzProducts2 = () => {
   });
 
   return (
-    <div className="p-4 bg-gray-50 min-h-screen">
+    <div className="min-h-screen p-4 bg-gray-50">
       <h1 className="mb-4 text-2xl font-semibold text-gray-800">
-        Billz mahsulotlar soni: <b className="text-blue-600">{data?.count}</b>{" "}
-        ta
+        Billz mahsulotlar soni: <b className="text-back">{data?.count}</b> ta
       </h1>
 
       <Table
         size="large"
         bordered
-        className="rounded-xl shadow-md bg-white"
+        className="bg-white shadow-md rounded-xl"
         scroll={{ x: "max-content" }}
         dataSource={data?.products?.map((item) => ({ key: item.id, ...item }))}
         loading={isLoading || isFetching}
@@ -112,7 +111,7 @@ export const BillzProducts2 = () => {
           <Flex
             justify="space-between"
             align="center"
-            className="bg-gray-100 p-3 rounded-lg"
+            className="p-3 bg-gray-100 rounded-lg"
           >
             <Input.Search
               size="large"
@@ -161,7 +160,7 @@ export const BillzProducts2 = () => {
                     alt={record.name}
                     width={64}
                     height={64}
-                    className="object-cover rounded-lg border shadow-sm"
+                    className="object-cover border rounded-lg shadow-sm"
                   />
                 ))}
               </div>
@@ -204,7 +203,7 @@ export const BillzProducts2 = () => {
                 title={
                   <>
                     {record.categories.map((cat) => (
-                      <p key={cat.id} className="p-1 border-b text-sm">
+                      <p key={cat.id} className="p-1 text-sm border-b">
                         {cat.name}
                       </p>
                     ))}
@@ -232,7 +231,7 @@ export const BillzProducts2 = () => {
                     {item.shop_id == "0793974b-f85b-4c1d-b0e7-9ad7b921d588" && (
                       <span className="text-gray-700">
                         {item.shop_name}:{" "}
-                        <b className="text-green-600 text-base">
+                        <b className="text-base text-green-600">
                           {formatPrice(item.retail_price, {
                             separator: ".",
                             withCurrency: false,
