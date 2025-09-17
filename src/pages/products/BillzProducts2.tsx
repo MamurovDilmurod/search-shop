@@ -111,12 +111,12 @@ export const BillzProducts2 = () => {
           <Flex
             justify="space-between"
             align="center"
-            className="p-3 bg-gray-100 rounded-lg"
+            vertical
+            className="flex-col gap-3 p-3 bg-gray-100 rounded-lg sm:flex-row"
           >
             <Input.Search
               size="large"
               placeholder="Ref bilan qidiring..."
-              className="w-[550px]"
               allowClear
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
@@ -130,11 +130,30 @@ export const BillzProducts2 = () => {
                   search: value,
                 });
               }}
+              className="
+                w-full
+                sm:w-[550px]
+                shadow-md
+                rounded-lg
+                focus:!border-blue-500
+                focus:!ring-2
+                focus:!ring-blue-300
+                transition-all
+              "
             />
+
             <Button
               size="large"
               type="primary"
-              className="bg-blue-600 hover:!bg-blue-700 px-6 rounded-lg shadow-md"
+              className="
+                w-full 
+                sm:w-auto
+                bg-blue-600 
+                hover:!bg-blue-700 
+                px-6 
+                rounded-lg 
+                shadow-md
+              "
               onClick={() => refetch()}
               icon={<IoReload />}
             >
